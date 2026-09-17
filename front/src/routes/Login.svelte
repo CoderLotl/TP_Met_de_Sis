@@ -4,7 +4,7 @@
 
     import { errorMessage } from '../lib/services/ToastDialoguer.js';
 
-    import Title from '../components/Page_Title.svelte';
+    import Title from '../components/snippets/Page_Title.svelte';
     import Main from '../components/Main.svelte';
 
     import loading_spinner from '../assets/loading.gif';
