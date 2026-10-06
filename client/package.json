@@ -8,5 +8,9 @@
   },
   "peerDependencies": {
     "typescript": "^7"
+  },
+  "dependencies": {
+    "diskusage": "^1.2.0",
+    "os-utils": "^0.0.14"
   }
 }

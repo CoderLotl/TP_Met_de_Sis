@@ -7,6 +7,7 @@ export class DataAccessFetch
         {
             let fetchParams =
             {
+                headers: { 'Content-Type': 'application/json' },
                 method: 'POST',
                 body: payload !== null ? JSON.stringify(payload) : '',
             };
