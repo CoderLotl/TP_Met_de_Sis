@@ -67,7 +67,7 @@ export class DevicesManager
         {
             this.insertNewDevice(dateTime, deviceData);
         }
-
+        
         return ResponseManager.ReturnResponse(req, res, '');
     }
 }
