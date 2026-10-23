@@ -1,6 +1,8 @@
 import { ResponseManager } from "../services/ResponseManager.js";
 import { DataAccess } from "../services/DataAccess.js";
 import { Logger } from "../services/Logger.js";
+import { Validator } from "../services/Validator.js";
+import { SESSION_DURATION_MS } from "./SessionsManager.js";
 import bcrypt from 'bcryptjs';
 import path from 'path';
 
@@ -18,7 +20,22 @@ export class MainManager
 
         let user = params['user'];
         let mail = params['mail'];
-        let password = params['password'];        
+        let password = params['password'];
+
+        if(!Validator.isNonEmptyString(user))
+        {
+            return ResponseManager.ReturnResponse(req, res, 'User is required', 400);
+        }
+
+        if(!Validator.isValidEmail(mail))
+        {
+            return ResponseManager.ReturnResponse(req, res, 'A valid mail is required', 400);
+        }
+
+        if(!Validator.isValidPassword(password))
+        {
+            return ResponseManager.ReturnResponse(req, res, 'Password must be at least 8 characters long', 400);
+        }
 
         try
         {
@@ -48,8 +65,78 @@ export class MainManager
         }
     }
 
-    static async loginUser(req, res)
+    static async loginUser(req, res, sessionsManager)
     {
-        
+        let params = ResponseManager.GetRequest(req);
+
+        let user = params['user'];
+        let password = params['password'];
+
+        if(!Validator.isNonEmptyString(user) || !Validator.isNonEmptyString(password))
+        {
+            return ResponseManager.ReturnResponse(req, res, 'User and password are required', 400);
+        }
+
+        try
+        {
+            let matchingUsers = DataAccess.select('users', [], ['user'], [user]);
+
+            if(matchingUsers.length === 0)
+            {
+                return ResponseManager.ReturnResponse(req, res, 'Invalid credentials', 401);
+            }
+
+            let foundUser = matchingUsers[0];
+
+            if(foundUser.deleted)
+            {
+                return ResponseManager.ReturnResponse(req, res, 'Invalid credentials', 401);
+            }
+
+            let passwordMatches = await bcrypt.compare(password, foundUser.password);
+
+            if(!passwordMatches)
+            {
+                return ResponseManager.ReturnResponse(req, res, 'Invalid credentials', 401);
+            }
+
+            let sessionId = sessionsManager.createSession(foundUser.id);
+
+            res.cookie('session_id', sessionId, {
+                httpOnly: true,
+                sameSite: 'strict',
+                secure: process.env.NODE_ENV === 'production',
+                maxAge: SESSION_DURATION_MS
+            });
+
+            DataAccess.insert('login_history', ['userId', 'clientIp', 'userAgent', 'lang', 'createdAt'],
+            [
+                foundUser.id,
+                req.ip,
+                req.get('User-Agent') || null,
+                req.get('Accept-Language') || null,
+                new Date().toISOString()
+            ]);
+
+            return ResponseManager.ReturnResponse(req, res, 'Login successful', 200);
+        }
+        catch(error)
+        {
+            Logger.log(`Error logging in user: ${error.message}`);
+            return ResponseManager.ReturnResponse(req, res, 'Error logging in', 500);
+        }
+    }
+
+    static logoutUser(req, res, sessionsManager)
+    {
+        let sessionId = req.cookies['session_id'];
+
+        if(sessionId)
+        {
+            sessionsManager.destroySession(sessionId);
+        }
+
+        res.clearCookie('session_id');
+        return ResponseManager.ReturnResponse(req, res, 'Logout successful', 200);
     }
 }

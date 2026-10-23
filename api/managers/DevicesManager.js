@@ -1,5 +1,6 @@
 import { Device } from "../classes/Device.js";
 import { ResponseManager } from "../services/ResponseManager.js";
+import { Validator } from "../services/Validator.js";
 import path from 'path';
 
 export class DevicesManager
@@ -54,8 +55,14 @@ export class DevicesManager
     listenHeartbeat(req, res)
     {
         let deviceData = ResponseManager.GetRequest(req);
+
+        if(!Validator.isNonEmptyString(deviceData.name))
+        {
+            return ResponseManager.ReturnResponse(req, res, 'Device name is required', 400);
+        }
+
         const dateTime = new Date();
-            
+
         if(this.searchDevice(deviceData.name))
         {
             const deviceKeys = Object.keys(deviceData);
@@ -69,5 +76,10 @@ export class DevicesManager
         }
         
         return ResponseManager.ReturnResponse(req, res, '');
+    }
+
+    getDevicesData(req, res)
+    {
+        return ResponseManager.ReturnResponse(req, res, Array.from(this.devices.values()));
     }
 }

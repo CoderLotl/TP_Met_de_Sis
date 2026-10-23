@@ -94,7 +94,7 @@ export class Heartbeat
                     disks: this.getVolumesStats(existingVolumes)
                 }
 
-                let serverResponse = await dataAccessFetch.postData(`${SERVER_URL}/heartbeat`, data);
+                let serverResponse = await dataAccessFetch.postData(`${SERVER_URL}/devices/heartbeat`, data);
                 if(!serverResponse || !serverResponse.success)
                 {
                     console.log('Server is down or unreachable.');

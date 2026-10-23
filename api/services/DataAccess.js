@@ -8,6 +8,39 @@ export class DataAccess
 {
     static db = new DatabaseSync(dbPath);
 
+    static
+    {
+        this.db.exec(`CREATE TABLE IF NOT EXISTS "login_history" (
+            "id"        INTEGER NOT NULL,
+            "userId"    INTEGER NOT NULL,
+            "clientIp"  TEXT,
+            "userAgent" TEXT,
+            "lang"      TEXT,
+            "createdAt" TEXT NOT NULL,
+            PRIMARY KEY("id" AUTOINCREMENT)
+        )`);
+
+        this.db.exec(`CREATE TABLE IF NOT EXISTS "action_logs" (
+            "id"        INTEGER NOT NULL,
+            "userId"    INTEGER NOT NULL,
+            "endpoint"  TEXT NOT NULL,
+            "method"    TEXT NOT NULL,
+            "clientIp"  TEXT,
+            "userAgent" TEXT,
+            "lang"      TEXT,
+            "createdAt" TEXT NOT NULL,
+            PRIMARY KEY("id" AUTOINCREMENT)
+        )`);
+
+        let userColumns = this.db.prepare('PRAGMA table_info(users)').all();
+        let hasDeletedColumn = userColumns.some(column => column.name === 'deleted');
+
+        if(!hasDeletedColumn)
+        {
+            this.db.exec('ALTER TABLE users ADD COLUMN deleted INTEGER NOT NULL DEFAULT 0');
+        }
+    }
+
     static select(table, columns = [], whereColumns = [], whereValues = [])
     {
         let query = `SELECT ${columns.length > 0 ? columns.join(', ') : '*'} FROM ${table}`;
