@@ -1,7 +1,21 @@
 import crypto from 'node:crypto';
 
-export const SESSION_DURATION_MS = 30 * 60 * 1000;
-const SWEEP_INTERVAL_MS = 10 * 60 * 1000;
+// Sin límite de tiempo: una sesión solo termina por logout explícito o porque el
+// backend se reinicia (las sesiones viven en memoria, no en la base). Esta constante
+// es nada más la duración de la cookie en el navegador, no un timeout de sesión.
+const COOKIE_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
+
+// Usado tanto al loguear como en cada request autenticado (ver AuthMiddleware.requireAuth),
+// para que la cookie sobreviva a cerrar el navegador y se renueve en cada uso.
+export function setSessionCookie(res, sessionId)
+{
+    res.cookie('session_id', sessionId, {
+        httpOnly: true,
+        sameSite: 'strict',
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: COOKIE_MAX_AGE_MS
+    });
+}
 
 export class SessionsManager
 {
@@ -10,7 +24,6 @@ export class SessionsManager
     constructor()
     {
         this.sessions = new Map();
-        setInterval(() => this.sweepExpiredSessions(), SWEEP_INTERVAL_MS);
     }
 
     createSession(userId)
@@ -19,8 +32,7 @@ export class SessionsManager
 
         this.sessions.set(sessionId, {
             userId,
-            createdAt: Date.now(),
-            expiresAt: Date.now() + SESSION_DURATION_MS
+            createdAt: Date.now()
         });
 
         return sessionId;
@@ -28,50 +40,11 @@ export class SessionsManager
 
     getSession(sessionId)
     {
-        const session = this.sessions.get(sessionId);
-
-        if(!session)
-        {
-            return undefined;
-        }
-
-        if(session.expiresAt < Date.now())
-        {
-            this.sessions.delete(sessionId);
-            return undefined;
-        }
-
-        return session;
-    }
-
-    touchSession(sessionId)
-    {
-        const session = this.getSession(sessionId);
-
-        if(!session)
-        {
-            return false;
-        }
-
-        session.expiresAt = Date.now() + SESSION_DURATION_MS;
-        return true;
+        return this.sessions.get(sessionId);
     }
 
     destroySession(sessionId)
     {
         return this.sessions.delete(sessionId);
-    }
-
-    sweepExpiredSessions()
-    {
-        const now = Date.now();
-
-        for(const [sessionId, session] of this.sessions)
-        {
-            if(session.expiresAt < now)
-            {
-                this.sessions.delete(sessionId);
-            }
-        }
     }
 }

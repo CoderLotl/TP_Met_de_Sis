@@ -1,11 +1,26 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
     import { navigate } from 'svelte-routing';
-    import { BACK_PATH, APP_NAME } from '../lib/stores/stores.js';
+    import { get } from 'svelte/store';
+    import { BACK_PATH, BASE_PATH, APP_NAME } from '../lib/stores/stores.js';
+
+    import { requireAuth, withMinDelay } from '../lib/auth.js';
+    import { DataAccessFetch } from '../lib/services/DataAccessFetch.js';
+    import { errorMessage, successMessage } from '../lib/services/ToastDialoguer.js';
 
     import Title from '../components/snippets/Page_Title.svelte';
     import Main from '../components/Main.svelte';
+    import Nav from '../components/Nav.svelte';
+    import Loading from '../components/snippets/Loading.svelte';
     import Equipo from '../components/snippets/Equipo.svelte';
+
+    const dataAccess = new DataAccessFetch();
+    let currentUser = null;
+    let ready = false;
+
+    // Un equipo se considera "online" si mandó un heartbeat dentro de esta ventana.
+    const OFFLINE_THRESHOLD_MS = 5000;
+    const POLL_INTERVAL_MS = 2000;
 
     $: appName = $APP_NAME;
     let comp = 'Main Board';
@@ -14,69 +29,127 @@
     $: equiposOffline = equipos.filter(equipo => equipo.status === 'offline').length;
 
     let timer = null;
+    let equipos = [];
+    let networkErrorShown = false;
 
-    let equipos =
-    [
-        { id: 1, nombre: 'Equipo A', status: 'online', ip: '192.168.1.101', uptime: { hours: 1, mins: 13, seconds: 22}, resources: { ram: 10, cpu: 20}},
-        { id: 2, nombre: 'Equipo B', status: 'online', ip: '192.168.1.102', uptime: { hours: 0, mins: 0, seconds: 0}, resources: { ram: 20, cpu: 20} },
-        { id: 3, nombre: 'Equipo C', status: 'offline', ip: '192.168.1.103', uptime: { hours: 0, mins: 0, seconds: 0}, resources: { ram: 20, cpu: 20} },
-    ];
-
-    function nav(path)
+    function formatUptime(totalSeconds)
     {
-        navigate(path);
+        totalSeconds = totalSeconds ?? 0;
+        const hours = Math.floor(totalSeconds / 3600);
+        const mins = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = Math.floor(totalSeconds % 60);
+        return { hours, mins, seconds };
     }
 
-    onMount(() => {
-        timer = setInterval(() => {
-            equipos.forEach(equipo => {
-                if (equipo.status !== 'online') return;
+    function bytesToMB(bytes)
+    {
+        return bytes != null ? Math.round(bytes / (1024 * 1024)) : 0;
+    }
 
-                // Tiempo
-                equipo.uptime.seconds++;
+    function bytesToGB(bytes)
+    {
+        return Math.round((bytes ?? 0) / (1024 * 1024 * 1024) * 10) / 10;
+    }
 
-                if(equipo.uptime.seconds >= 60)
-                {
-                    equipo.uptime.seconds = 0;
-                    equipo.uptime.mins++;
-                }
+    function mapDisk(disk)
+    {
+        const total = disk.stats?.total ?? 0;
+        const free = disk.stats?.free ?? 0;
+        const used = Math.max(0, total - free);
 
-                if(equipo.uptime.mins >= 60)
-                {
-                    equipo.uptime.mins = 0;
-                    equipo.uptime.hours++;
-                }
+        return {
+            letter: disk.volumeLetter,
+            usedGB: bytesToGB(used),
+            totalGB: bytesToGB(total),
+            percent: total > 0 ? Math.round((used / total) * 100) : 0
+        };
+    }
 
-                // Recursos
-                let min = 5;
-                let max = 100;
+    function mapDevice(device)
+    {
+        const lastUpdate = new Date(device.lastUpdate).getTime();
+        const status = (Date.now() - lastUpdate) < OFFLINE_THRESHOLD_MS ? 'online' : 'offline';
 
-                let minCeiled = Math.ceil(-5);
-                let maxFloored = Math.floor(5);
+        return {
+            nombre: device.name,
+            ip: device.ip,
+            status,
+            uptime: formatUptime(device.uptime),
+            resources: {
+                ram: device.totalmem ? Math.round((1 - device.freemem / device.totalmem) * 100) : 0,
+                ramUsedMB: bytesToMB(device.totalmem - device.freemem),
+                ramTotalMB: bytesToMB(device.totalmem),
+                cpu: device.cpu != null ? Math.round(device.cpu * 100) : 0
+            },
+            disks: (device.disks ?? []).map(mapDisk)
+        };
+    }
 
-                let change = ()=>Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+    async function fetchDevices()
+    {
+        let BACK_PATH_ = get(BACK_PATH);
+        let serverResponse = await dataAccess.getData(`${BACK_PATH_}/devices`);
 
-                equipo.resources.ram = (()=>
-                {
-                    const c = change();
-                    return (equipo.resources.ram + c >= min && equipo.resources.ram + c <= max) ? equipo.resources.ram + c : equipo.resources.ram;
-                })();
+        if(!serverResponse.success)
+        {
+            if(serverResponse.status === 401 || serverResponse.status === 403)
+            {
+                stopPolling();
+                let BASE_PATH_ = get(BASE_PATH);
+                navigate(`${BASE_PATH_}/`, { replace: true });
+                return;
+            }
 
-                equipo.resources.cpu = (()=>
-                {
-                    const c = change();
-                    return (equipo.resources.cpu + c >= min && equipo.resources.cpu + c <= max) ? equipo.resources.cpu + c : equipo.resources.cpu;
-                })();                
-            });
+            // Fallas de red reales (PC suspendida, wifi caído, etc.) se reintentan solas en
+            // el próximo poll — avisamos una sola vez por corte, no en cada tick de 2s.
+            if(!networkErrorShown)
+            {
+                networkErrorShown = true;
+                errorMessage(serverResponse.errorMsg);
+            }
+            return;
+        }
 
-            // Reasignación para forzar a Svelte a actualizar la vista
-            equipos = equipos;
-        }, 1000);
+        if(networkErrorShown)
+        {
+            networkErrorShown = false;
+            successMessage('Conexión restablecida.');
+        }
+
+        let devices = (await serverResponse.response.json())['response'];
+        equipos = devices.map(mapDevice);
+    }
+
+    function stopPolling()
+    {
+        if(timer)
+        {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+
+    onMount(async () =>
+    {
+        currentUser = await withMinDelay(async () =>
+        {
+            let user = await requireAuth();
+            if(user)
+            {
+                await fetchDevices();
+            }
+            return user;
+        });
+
+        ready = true;
+        if(!currentUser) return;
+
+        timer = setInterval(fetchDevices, POLL_INTERVAL_MS);
     });
 
     onDestroy(() =>
     {
-        clearInterval(timer);
+        stopPolling();
     });
 </script>
 
@@ -86,8 +159,16 @@
     <div class="flex w-screen h-screen p-8 bg-slate-900 items-center justify-center">
         <div class="flex flex-col p-4 w-full h-full bg-slate-200 rounded-lg shadow-md items-center justify-center gap-4">
 
+            <Nav currentView={'home'} />
+            
+            {#if !ready}
+
+            <Loading />
+
+            {:else}            
+
             <!-- Barra de estados -->
-            <div class="flex w-full bg-slate-400 rounded-lg justify-around p-2 font-bold">
+            <div class="flex w-full bg-slate-400 rounded-lg justify-around p-2 font-bold items-center">
                 <div class="rounded-lg border-x-8 border-blue-600 pt-2 px-8 bg-slate-300">
                     Total Equipos
                     <div class="text-center text-2xl text-blue-400">
@@ -110,12 +191,14 @@
 
             <!-- Display de Equipos -->
             <div class="flex w-full h-full bg-slate-400 rounded-lg items-start py-8 px-4">
-                {#each equipos as equipo}
+                {#each equipos as equipo (equipo.nombre)}
 
                 <Equipo {equipo} />
 
                 {/each}
             </div>
+
+            {/if}
 
         </div>
     </div>

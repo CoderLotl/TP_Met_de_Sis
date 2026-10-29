@@ -1,5 +1,6 @@
 import { ResponseManager } from "../services/ResponseManager.js";
 import { DataAccess } from "../services/DataAccess.js";
+import { setSessionCookie } from "../managers/SessionsManager.js";
 
 export function requireAuth(sessionsManager)
 {
@@ -21,7 +22,13 @@ export function requireAuth(sessionsManager)
             return ResponseManager.ReturnResponse(req, res, 'Not authenticated', 401);
         }
 
-        sessionsManager.touchSession(sessionId);
+        if(matchingUsers[0].status === 'banned')
+        {
+            sessionsManager.destroySession(sessionId);
+            return res.status(401).json({ response: 'This account has been banned.', forceLogout: true });
+        }
+
+        setSessionCookie(res, sessionId);
         req.userId = session.userId;
         req.user = matchingUsers[0];
         next();

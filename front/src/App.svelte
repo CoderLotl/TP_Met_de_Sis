@@ -1,25 +1,17 @@
 <script>
-    import { Router, Route, navigate } from 'svelte-routing';
-    import { BACK_PATH, BASE_PATH, APP_NAME } from './lib/stores/stores.js';
-    import { writable, get } from 'svelte/store';
+    import { Router, Route } from 'svelte-routing';
+    import { BACK_PATH, BASE_PATH } from './lib/stores/stores.js';
     import { GetAppName } from './lib/app.js';
 
     import Login from './routes/Login.svelte';
     import Home from './routes/Home.svelte';
-    import page3 from './routes/page3.svelte';
+    import Users from './routes/Users.svelte';
+    import Error from './routes/Error.svelte';
 
-    const isDev = import.meta.env.MODE;
-
-    if(isDev == 'development')
-    {
-      BASE_PATH.set('');
-      BACK_PATH.set('http://localhost'); // << - - - setear la URL de DEV acá      
-    }
-    else
-    {
-      BASE_PATH.set('');
-      BACK_PATH.set(window.location.origin); // << - - - setear la URL de PROD acá      
-    }
+    // En dev, el servidor de Vite proxea /user, /devices, /app_name y /test hacia
+    // el back (ver vite.config.js), así que una ruta relativa alcanza en ambos casos.
+    BASE_PATH.set('');
+    BACK_PATH.set('');
 
     GetAppName();
 
@@ -27,7 +19,9 @@
     [
         { path: '/', component: Login },
         { path: '/home', component: Home },
-        { path: '/page3', component: page3 }
+        { path: '/users', component: Users },
+        { path: '/error', component: Error },
+        { path: '*', component: Error }
     ];
 </script>
 

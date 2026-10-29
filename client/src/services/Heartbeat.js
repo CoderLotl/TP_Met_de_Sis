@@ -78,7 +78,7 @@ export class Heartbeat
         {
             if(SERVER_URL == '')
             {
-                console.log('No server URL configured. Please set the SERVER_URL in config.js');
+                console.log('No server URL configured. Please set the SERVER_URL in config.json.');
                 await delay(1000);
             }
             else

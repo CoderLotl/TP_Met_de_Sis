@@ -2,7 +2,7 @@ import { ResponseManager } from "../services/ResponseManager.js";
 import { DataAccess } from "../services/DataAccess.js";
 import { Logger } from "../services/Logger.js";
 import { Validator } from "../services/Validator.js";
-import { SESSION_DURATION_MS } from "./SessionsManager.js";
+import { setSessionCookie } from "./SessionsManager.js";
 import bcrypt from 'bcryptjs';
 import path from 'path';
 
@@ -88,7 +88,7 @@ export class MainManager
 
             let foundUser = matchingUsers[0];
 
-            if(foundUser.deleted)
+            if(foundUser.deleted || foundUser.status === 'banned')
             {
                 return ResponseManager.ReturnResponse(req, res, 'Invalid credentials', 401);
             }
@@ -102,12 +102,7 @@ export class MainManager
 
             let sessionId = sessionsManager.createSession(foundUser.id);
 
-            res.cookie('session_id', sessionId, {
-                httpOnly: true,
-                sameSite: 'strict',
-                secure: process.env.NODE_ENV === 'production',
-                maxAge: SESSION_DURATION_MS
-            });
+            setSessionCookie(res, sessionId);
 
             DataAccess.insert('login_history', ['userId', 'clientIp', 'userAgent', 'lang', 'createdAt'],
             [

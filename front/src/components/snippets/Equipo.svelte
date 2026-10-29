@@ -79,6 +79,11 @@
                     />
                 </div>
             </div>
+            {#if equipo.status === 'online'}
+            <div class="text-right text-xs text-gray-600">
+                {equipo.resources.ramUsedMB} MB / {equipo.resources.ramTotalMB} MB
+            </div>
+            {/if}
             <div class="mt-2 flex items-center justify-between">
                 <div class="mb-[3px]">
                     CPU:
@@ -93,5 +98,35 @@
                 </div>
             </div>
         </div>
+
+        {#if equipo.disks && equipo.disks.length > 0}
+        <!-- separador -->
+        <div class="w-full h-[1px] bg-gray-700/70 mt-4"></div>
+
+        <!-- Discos -->
+        <div class="mt-4 px-4">
+            <p>Discos</p>
+            {#each equipo.disks as disk}
+            <div class="mt-2 flex items-center justify-between">
+                <div class="mb-[3px] w-[30px]">
+                    {disk.letter}:
+                </div>
+                <div class="w-[160px]">
+                    <Progress_Bar maxValue=100
+                        segments={[
+                        { value: equipo.status === 'online' ? disk.percent : 0, colorClass: 'bg-blue-600' }
+                        ]}
+                        online={equipo.status === 'online'}
+                    />
+                </div>
+            </div>
+            {#if equipo.status === 'online'}
+            <div class="text-right text-xs text-gray-600">
+                {disk.usedGB} GB / {disk.totalGB} GB
+            </div>
+            {/if}
+            {/each}
+        </div>
+        {/if}
     </div>
 </div>

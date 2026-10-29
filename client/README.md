@@ -10,4 +10,4 @@ La app funciona con un archivo config.json que debe ser copiado en la misma carp
 
 0- Correr **`install_bun.ps1`**. ***(solo si Bun no fue instalado antes)***
 1- Ejecutar **`bun install`**.
-2- Ejecutar **`bun build ./index.ts --compile --outfile ./bin/client.exe --windows-hide-console** para compilar el cliente.
+2- Ejecutar **`bun build ./index.ts --compile --outfile ./bin/client.exe --windows-hide-console`** para compilar el cliente.

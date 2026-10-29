@@ -1,17 +1,20 @@
 <script>
     import { navigate } from 'svelte-routing';
+    import { get } from 'svelte/store';
     import { BACK_PATH, APP_NAME } from '../lib/stores/stores.js';
 
     import { errorMessage } from '../lib/services/ToastDialoguer.js';
+    import { DataAccessFetch } from '../lib/services/DataAccessFetch.js';
 
     import Title from '../components/snippets/Page_Title.svelte';
     import Main from '../components/Main.svelte';
 
     import loading_spinner from '../assets/loading.gif';
 
+    const dataAccess = new DataAccessFetch();
+
     $: appName = $APP_NAME;
     let comp = 'Login';
-    let loginTimeOut = null;
     let logging = false;
     $: spinnerVisible = logging ? '' : 'invisible';
 
@@ -31,26 +34,25 @@
         }
     }
 
-    function login(e)
+    async function login(e)
     {
         e?.preventDefault();
-        loginTimeOut = null;
         logging = true;
 
-        loginTimeOut = setTimeout(() =>
-        {
-            logging = false;
-            loginTimeOut = null;
+        let BACK_PATH_ = get(BACK_PATH);
+        let serverResponse = await dataAccess.postData(`${BACK_PATH_}/user/login`, { user, password }, true, false, 'Error al iniciar sesión:');
 
-            if(user != 'admin' && password != 'admin')
-            {                
-                errorMessage('Usuario o contraseña incorrectos.');
-                user = '';
-                password = '';
-                return;
-            }
-            nav('/home');
-        }, 2000);        
+        logging = false;
+
+        if(!serverResponse.success)
+        {
+            errorMessage(serverResponse.errorMsg);
+            user = '';
+            password = '';
+            return;
+        }
+
+        nav('/home');
     }
 </script>
 

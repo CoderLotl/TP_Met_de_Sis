@@ -21,6 +21,11 @@ router.get('/', (req, res) =>
     return MainManager.ReturnToFront(req, res);
 });
 
+router.get('/app_name', (req, res) =>
+{
+    return ResponseManager.ReturnResponse(req, res, 'Monitor de Equipos');
+});
+
 // --- /user ---
 const userRouter = express.Router();
 
@@ -41,7 +46,16 @@ userRouter.post('/logout', (req, res) =>
 
 userRouter.get('/me', requireAuth(sessionsManager), (req, res) =>
 {
-    return ResponseManager.ReturnResponse(req, res, { userId: req.userId });
+    return ResponseManager.ReturnResponse(req, res, {
+        userId: req.userId,
+        user: req.user.user,
+        permissionKey: req.user.permissionKey
+    });
+});
+
+userRouter.get('/', requireAuth(sessionsManager), requirePermission(PERMISSIONS.MANAGE_USERS), (req, res) =>
+{
+    return UsersManager.listUsers(req, res);
 });
 
 userRouter.patch('/:id', requireAuth(sessionsManager), requirePermission(PERMISSIONS.MANAGE_USERS), logAction, (req, res) =>
@@ -70,5 +84,12 @@ devicesRouter.get('/', requireAuth(sessionsManager), requirePermission(PERMISSIO
 });
 
 router.use('/devices', devicesRouter);
+
+// Fallback SPA: cualquier otro GET no capturado arriba sirve el front,
+// para que recargar una ruta profunda (ej. /home) en producción no 404ee.
+router.get('/*splat', (req, res) =>
+{
+    return MainManager.ReturnToFront(req, res);
+});
 
 export default router;

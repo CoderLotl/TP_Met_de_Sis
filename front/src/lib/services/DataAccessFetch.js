@@ -136,6 +136,33 @@ export class DataAccessFetch
         }
     }
     
+    // PATCH
+    async patchData(url, payload, includeCredentials = true, errorMsg = 'Request failed:')
+    {
+        let response;
+        try
+        {
+            let fetchParams =
+            {
+                method: 'PATCH',
+                headers: this.setHeaders(),
+                body: JSON.stringify(payload)
+            }
+
+            if(includeCredentials)
+            {
+                fetchParams.credentials = 'include';
+            }
+
+            response = await fetch(url, fetchParams);
+            return this.ProcessAnswer(response, errorMsg);
+        }
+        catch (error)
+        {
+            return this.CatchError(error, response);
+        }
+    }
+
     // DELETE
     async deleteData(url, params = null, includeCredentials = true, errorMsg = 'Request failed:')
     {
