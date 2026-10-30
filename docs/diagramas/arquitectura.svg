@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="470" viewBox="0 0 1180 470"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><rect x="30" y="30" width="270" height="130" rx="10" fill="#eef3f8" stroke="#37474f" stroke-width="1.4"/>
+<text x="165" y="52" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Equipo 1</text>
+<text x="46" y="82" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Agente de monitoreo (Bun)</text>
+<text x="46" y="103" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">client.exe + config.json</text>
+<text x="46" y="124" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Recolecta CPU, RAM, discos,</text>
+<text x="46" y="145" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">IP y uptime</text>
+<rect x="30" y="175" width="270" height="130" rx="10" fill="#eef3f8" stroke="#37474f" stroke-width="1.4"/>
+<text x="165" y="197" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Equipo 2</text>
+<text x="46" y="227" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Agente de monitoreo (Bun)</text>
+<text x="46" y="248" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">client.exe + config.json</text>
+<text x="46" y="269" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Recolecta CPU, RAM, discos,</text>
+<text x="46" y="290" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">IP y uptime</text>
+<rect x="30" y="320" width="270" height="130" rx="10" fill="#eef3f8" stroke="#37474f" stroke-width="1.4"/>
+<text x="165" y="342" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Equipo N</text>
+<text x="46" y="372" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Agente de monitoreo (Bun)</text>
+<text x="46" y="393" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">client.exe + config.json</text>
+<text x="46" y="414" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Recolecta CPU, RAM, discos,</text>
+<text x="46" y="435" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">IP y uptime</text>
+<rect x="420" y="60" width="340" height="350" rx="10" fill="#fff3e0" stroke="#37474f" stroke-width="1.4"/>
+<text x="590" y="82" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Servidor (Node.js + Express)</text>
+<text x="436" y="112" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">router.js: endpoints /user y /devices</text>
+<text x="436" y="133" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Middlewares:</text>
+<text x="436" y="154" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">   requireAuth, requirePermission,</text>
+<text x="436" y="175" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">   logAction</text>
+<text x="436" y="196" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Managers:</text>
+<text x="436" y="217" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">   DevicesManager (equipos en memoria)</text>
+<text x="436" y="238" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">   SessionsManager (sesiones en memoria)</text>
+<text x="436" y="259" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">   UsersManager, MainManager</text>
+<text x="436" y="280" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Services: DataAccess, Validator,</text>
+<text x="436" y="301" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">   ResponseManager, Logger</text>
+<text x="436" y="322" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Sirve el front compilado (front/dist)</text>
+<path d="M520,425 v0" />
+<rect x="880" y="110" width="270" height="150" rx="10" fill="#e8f5e9" stroke="#37474f" stroke-width="1.4"/>
+<text x="1015" y="132" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Navegador web</text>
+<text x="896" y="162" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">SPA Svelte + Tailwind</text>
+<text x="896" y="183" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Login, Dashboard, Usuarios</text>
+<text x="896" y="204" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Consulta /devices cada 2 s</text>
+<g stroke="#333" stroke-width="1.6" fill="none"><circle cx="1015" cy="323" r="10" fill="#fff"/><line x1="1015" y1="333" x2="1015" y2="357"/><line x1="999" y1="341" x2="1031" y2="341"/><line x1="1015" y1="357" x2="1003" y2="375"/><line x1="1015" y1="357" x2="1027" y2="375"/></g>
+<text x="1015" y="391" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Personal de IT</text>
+<g transform="translate(0,-10)"><ellipse cx="590" cy="430" rx="0" ry="0"/></g>
+<line x1="300" y1="95" x2="420" y2="180" stroke="#333" stroke-width="1.5" marker-end="url(#m-filled)"/>
+<text x="360" y="127.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a"></text>
+<line x1="300" y1="240" x2="420" y2="240" stroke="#333" stroke-width="1.5" marker-end="url(#m-filled)"/>
+<text x="360" y="230" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a"></text>
+<line x1="300" y1="385" x2="420" y2="300" stroke="#333" stroke-width="1.5" marker-end="url(#m-filled)"/>
+<text x="360" y="332.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a"></text>
+<text x="360" y="184" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">POST</text><text x="360" y="198" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">/devices/</text><text x="360" y="212" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">heartbeat</text><text x="360" y="226" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">(1 por s)</text>
+<line x1="880" y1="165" x2="760" y2="165" stroke="#333" stroke-width="1.5" marker-end="url(#m-filled)"/>
+<text x="820" y="155" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">GET /devices</text>
+<line x1="760" y1="215" x2="880" y2="215" stroke="#333" stroke-width="1.5" marker-end="url(#m-filled)"/>
+<text x="820" y="229" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">JSON de equipos</text>
+<line x1="1015" y1="300" x2="1015" y2="262" stroke="#333" stroke-width="1.5" marker-end="url(#m-filled)"/>
+<path d="M520,424 v24 a70,10 0 0 0 140,0 v-24" fill="#ede7f6" stroke="#37474f" stroke-width="1.3"/><ellipse cx="590" cy="424" rx="70" ry="10" fill="#ede7f6" stroke="#37474f" stroke-width="1.3"/>
+<text x="670" y="438" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">SQLite (db.db): users, login_history, action_logs</text>
+<line x1="590" y1="410" x2="590" y2="413" stroke="#333" stroke-width="1.5" marker-end="url(#m-filled)"/></svg>

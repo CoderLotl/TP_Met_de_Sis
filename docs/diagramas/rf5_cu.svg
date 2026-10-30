@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><rect x="200" y="15" width="690" height="390" fill="#fbfbfb" stroke="#555" stroke-width="1.3"/>
+<text x="545" y="33" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">RF05 — Gestionar permisos y registrar la actividad</text>
+<g stroke="#333" stroke-width="1.6" fill="none"><circle cx="90" cy="98" r="10" fill="#fff"/><line x1="90" y1="108" x2="90" y2="132"/><line x1="74" y1="116" x2="106" y2="116"/><line x1="90" y1="132" x2="78" y2="150"/><line x1="90" y1="132" x2="102" y2="150"/></g>
+<text x="90" y="166" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Administrador</text>
+<g stroke="#333" stroke-width="1.6" fill="none"><circle cx="90" cy="298" r="10" fill="#fff"/><line x1="90" y1="308" x2="90" y2="332"/><line x1="74" y1="316" x2="106" y2="316"/><line x1="90" y1="332" x2="78" y2="350"/><line x1="90" y1="332" x2="102" y2="350"/></g>
+<text x="90" y="358" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Usuario</text><text x="90" y="374" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">autenticado</text>
+<ellipse cx="370" cy="100" rx="95" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="370" y="92" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Asignar permisos</text><text x="370" y="108" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">a un usuario</text>
+<ellipse cx="370" cy="300" rx="100" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="370" y="292" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Acceder a una función</text><text x="370" y="308" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">protegida</text>
+<ellipse cx="700" cy="210" rx="90" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="700" y="210" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Verificar permiso</text>
+<ellipse cx="700" cy="100" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="700" y="100" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Registrar acción</text>
+<ellipse cx="700" cy="330" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="700" y="330" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Registrar ingreso</text>
+<path d="M110.0,128.8 L280.4,109.9" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,336.2 L279.3,312.6" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M90.0,176.0 L90.0,286.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-triangle)"/>
+<path d="M465.0,100.0 L615.0,100.0" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="507.65" y="82.5" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="540" y="91" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M435.3,121.8 L639.8,189.9" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="505.21445785275193" y="138.35481928425065" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="537.564457852752" y="146.85481928425065" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M444.0,279.8 L633.4,228.2" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="506.34970036697973" y="236.49099080900555" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="538.6997003669798" y="244.99099080900555" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M618.3,322.6 L465.7,308.7" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="497.04164797022787" y="290.63560436092985" width="89.89999999999999" height="32" fill="#fff" opacity="0.92"/>
+<text x="541.9916479702279" y="299.13560436092985" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«extend»</text><text x="541.9916479702279" y="314.13560436092985" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">[es un login]</text></svg>

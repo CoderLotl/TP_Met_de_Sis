@@ -2,13 +2,44 @@ import fs from 'fs';
 import path from 'path';
 import { DataAccessFetch } from './DataAccessFetch.js';
 import os from 'os';
+import dgram from 'dgram';
 import osUtils from 'os-utils';
 import diskusage from 'diskusage';
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export class Heartbeat
 {
-    getLocalIp()
+    // IP que el sistema operativo usa para llegar al servidor. Con varias placas
+    // (VirtualBox, VPN, etc.) "la primera IPv4" puede no ser la de la red real.
+    // Un connect UDP no envía paquetes: sólo le pide la ruta al sistema.
+    getRouteIp(serverUrl)
+    {
+        return new Promise((resolve) =>
+        {
+            const socket = dgram.createSocket('udp4');
+            let done = false;
+            const finish = (ip) => { if(done) return; done = true; socket.close(); resolve(ip); };
+            socket.once('error', () => finish(null));
+
+            try
+            {
+                let host = new URL(serverUrl).hostname;
+                // Si el servidor corre en esta misma PC, se usa la ruta por defecto.
+                if(host === 'localhost' || host.startsWith('127.') || host === '[::1]')
+                {
+                    host = '8.8.8.8';
+                }
+
+                socket.connect(9, host, () => finish(socket.address().address));
+            }
+            catch(error)
+            {
+                finish(null);
+            }
+        });
+    }
+
+    getFirstIp()
     {
         const inferfaces = os.networkInterfaces();
         for(const name of Object.keys(inferfaces))
@@ -66,13 +97,16 @@ export class Heartbeat
     async beat()
     {
         let dataAccessFetch = new DataAccessFetch();
-        let localIp = this.getLocalIp();
         let existingVolumes = this.getExistingVolumes();
 
         const configPath = path.join(path.dirname(process.execPath), 'config.json');
         let config;
         try{ config = JSON.parse(fs.readFileSync(configPath, 'utf8'));} catch(error){ config = { serverUrl: '' }; }        
         const SERVER_URL = config.serverUrl;
+
+        // config.json puede fijar la IP a mano ("ip": "192.168.0.10"); si no, se detecta.
+        let localIp = config.ip || null;
+        let ipResolved = Boolean(localIp);
 
         do
         {
@@ -83,6 +117,13 @@ export class Heartbeat
             }
             else
             {
+                if(!ipResolved)
+                {
+                    let routeIp = await this.getRouteIp(SERVER_URL);
+                    ipResolved = Boolean(routeIp);
+                    localIp = routeIp || this.getFirstIp();
+                }
+
                 let data =
                 {
                     ip: localIp,

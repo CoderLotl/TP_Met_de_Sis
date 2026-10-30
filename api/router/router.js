@@ -29,7 +29,7 @@ router.get('/app_name', (req, res) =>
 // --- /user ---
 const userRouter = express.Router();
 
-userRouter.post('/register', (req, res) =>
+userRouter.post('/register', requireAuth(sessionsManager), requirePermission(PERMISSIONS.MANAGE_USERS), logAction, (req, res) =>
 {
     return MainManager.RegisterUser(req, res);
 });

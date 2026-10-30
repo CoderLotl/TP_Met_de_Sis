@@ -2,7 +2,8 @@ import { DatabaseSync } from 'node:sqlite';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dbPath = path.join(__dirname, '../db/db.db');
+// DB_PATH permite apuntar a otra base (los tests usan una copia temporal).
+const dbPath = process.env.DB_PATH || path.join(__dirname, '../db/db.db');
 
 export class DataAccess
 {

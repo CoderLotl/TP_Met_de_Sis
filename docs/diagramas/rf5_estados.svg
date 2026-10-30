@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="360" viewBox="0 0 940 360"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><circle cx="40" cy="70" r="9" fill="#222"/>
+<rect x="100" y="42" width="200" height="56" rx="14" fill="#eceff1" stroke="#1565c0" stroke-width="1.3"/>
+<text x="200" y="62" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Sin permisos</text><text x="200" y="78" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(permissionKey = 0)</text>
+<rect x="495" y="42" width="210" height="56" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3"/>
+<text x="600" y="62" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Solo ver equipos</text><text x="600" y="78" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(permissionKey = 2)</text>
+<rect x="90" y="252" width="220" height="56" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3"/>
+<text x="200" y="272" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Solo gestionar usuarios</text><text x="200" y="288" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(permissionKey = 1)</text>
+<rect x="495" y="252" width="210" height="56" rx="14" fill="#e8f5e9" stroke="#1565c0" stroke-width="1.3"/>
+<text x="600" y="272" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Ambos permisos</text><text x="600" y="288" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(permissionKey = 3)</text>
+<path d="M49.0,70.0 L100.0,70.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="57.9" y="49.5" width="33.2" height="17" fill="#fff" opacity="0.92"/>
+<text x="74.5" y="58" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">alta</text>
+<path d="M300.0,60.0 L400.0,50.0 L495.0,59.5" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="305.05" y="36.5" width="89.89999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="350" y="45" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">+ Ver equipos</text>
+<path d="M495.0,81.5 L400.0,92.0 L300.0,81.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="305.05" y="90" width="89.89999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="350" y="98.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">− Ver equipos</text>
+<path d="M194.7,98.0 L180.0,175.0 L194.7,252.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="93.68333333333331" y="120.5" width="77.3" height="32" fill="#fff" opacity="0.92"/>
+<text x="132.33333333333331" y="129" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">+ Gestionar</text><text x="132.33333333333331" y="144" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">usuarios</text>
+<path d="M206.7,252.0 L225.0,175.0 L206.7,98.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="232.1833333333333" y="197.5" width="77.3" height="32" fill="#fff" opacity="0.92"/>
+<text x="270.8333333333333" y="206" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">− Gestionar</text><text x="270.8333333333333" y="221" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">usuarios</text>
+<path d="M594.7,98.0 L580.0,175.0 L594.7,252.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="493.6833333333333" y="120.5" width="77.3" height="32" fill="#fff" opacity="0.92"/>
+<text x="532.3333333333333" y="129" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">+ Gestionar</text><text x="532.3333333333333" y="144" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">usuarios</text>
+<path d="M606.7,252.0 L625.0,175.0 L606.7,98.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="632.1833333333333" y="197.5" width="77.3" height="32" fill="#fff" opacity="0.92"/>
+<text x="670.8333333333333" y="206" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">− Gestionar</text><text x="670.8333333333333" y="221" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">usuarios</text>
+<path d="M310.0,269.0 L400.0,260.0 L495.0,269.5" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="402.55" y="246.25" width="89.89999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="447.5" y="254.75" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">+ Ver equipos</text>
+<path d="M495.0,291.6 L400.0,302.0 L310.0,292.1" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="402.55" y="300.275" width="89.89999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="447.5" y="308.775" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">− Ver equipos</text>
+<path d="M740,130 H918 L930,142 V216 H740 Z" fill="#fffde7" stroke="#9e9d24"/><path d="M918,130 V142 H930" fill="none" stroke="#9e9d24"/>
+<text x="748" y="150.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">Un administrador no</text><text x="748" y="165.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">puede quitarse a sí</text><text x="748" y="180.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">mismo "Gestionar</text><text x="748" y="195.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">usuarios" (HTTP 400).</text></svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="440" viewBox="0 0 920 440"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><rect x="200" y="15" width="690" height="410" fill="#fbfbfb" stroke="#555" stroke-width="1.3"/>
+<text x="545" y="33" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">RF04 — Administrar usuarios</text>
+<g stroke="#333" stroke-width="1.6" fill="none"><circle cx="90" cy="188" r="10" fill="#fff"/><line x1="90" y1="198" x2="90" y2="222"/><line x1="74" y1="206" x2="106" y2="206"/><line x1="90" y1="222" x2="78" y2="240"/><line x1="90" y1="222" x2="102" y2="240"/></g>
+<text x="90" y="256" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Administrador</text>
+<ellipse cx="370" cy="70" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="370" y="70" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Listar usuarios</text>
+<ellipse cx="370" cy="170" rx="90" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="370" y="170" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Dar de alta usuario</text>
+<ellipse cx="370" cy="270" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="370" y="270" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Modificar usuario</text>
+<ellipse cx="370" cy="370" rx="90" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="370" y="370" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Dar de baja usuario</text>
+<ellipse cx="720" cy="200" rx="115" ry="31" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="720" y="192" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Validar datos</text><text x="720" y="208" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(usuario, mail, contraseña)</text>
+<ellipse cx="720" cy="330" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="720" y="330" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Registrar acción</text>
+<path d="M110.0,210.2 L326.9,93.3" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,217.4 L293.1,184.0" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,224.5 L295.6,257.0" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,231.6 L325.8,346.5" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M456.5,177.4 L610.4,190.6" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="501.12202990435014" y="166.51188827751574" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="533.4720299043502" y="175.01188827751574" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M441.9,255.6 L627.6,218.5" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="502.43675908037073" y="219.54264818392585" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="534.7867590803708" y="228.04264818392585" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M444.8,282.8 L645.2,317.2" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="532.6896230646156" y="285.9353639539341" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="565.0396230646156" y="294.4353639539341" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M454.1,360.4 L640.0,339.1" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="514.7115364530158" y="332.2643958339411" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="547.0615364530158" y="340.7643958339411" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text></svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="290" viewBox="0 0 900 290"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><circle cx="40" cy="140" r="9" fill="#222"/>
+<rect x="225" y="114" width="150" height="52" rx="14" fill="#e8f5e9" stroke="#1565c0" stroke-width="1.3"/>
+<text x="300" y="140" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Online</text>
+<rect x="575" y="114" width="150" height="52" rx="14" fill="#ffebee" stroke="#1565c0" stroke-width="1.3"/>
+<text x="650" y="140" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Offline</text>
+<path d="M49.0,140.0 L225.0,140.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="60.55" y="102" width="152.9" height="32" fill="#fff" opacity="0.92"/>
+<text x="137" y="110.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">aparece en GET /devices</text><text x="137" y="125.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">con reporte reciente</text>
+<path d="M375.0,122.9 L475.0,100.0 L575.0,122.9" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="345.4" y="88.92857142857143" width="159.2" height="17" fill="#fff" opacity="0.92"/>
+<text x="425" y="97.42857142857143" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">ahora − lastUpdate ≥ 5 s</text>
+<path d="M575.0,159.3 L475.0,185.0 L375.0,159.3" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="445.4" y="177.64285714285714" width="159.2" height="17" fill="#fff" opacity="0.92"/>
+<text x="525" y="186.14285714285714" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">llega un nuevo heartbeat</text>
+<path d="M278,114 C255,59 345,59 322,114" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<text x="300" y="58" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">heartbeat / métricas actualizadas</text>
+<path d="M560,215 H868 L880,227 V271 H560 Z" fill="#fffde7" stroke="#9e9d24"/><path d="M868,215 V227 H880" fill="none" stroke="#9e9d24"/>
+<text x="568" y="235.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">En Offline la tarjeta deja las barras de RAM y</text><text x="568" y="250.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">CPU vacías y oculta los discos.</text></svg>

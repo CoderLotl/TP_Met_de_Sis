@@ -3,7 +3,7 @@ import cookieParser from 'cookie-parser';
 import router from './api/router/router.js';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // parseo de body JSON (llena req.body para los POST).
 app.use(express.json());

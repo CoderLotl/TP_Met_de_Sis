@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="380" viewBox="0 0 980 380"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><circle cx="40" cy="170" r="9" fill="#222"/>
+<rect x="140" y="146" width="180" height="48" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3"/>
+<text x="230" y="170" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Listando usuarios</text>
+<rect x="535" y="22" width="170" height="56" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3"/>
+<text x="620" y="42" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Formulario de</text><text x="620" y="58" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">alta abierto</text>
+<rect x="535" y="142" width="170" height="56" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3"/>
+<text x="620" y="162" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Formulario de</text><text x="620" y="178" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">edición abierto</text>
+<rect x="535" y="266" width="170" height="48" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3"/>
+<text x="620" y="290" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Confirmando baja</text>
+<path d="M49.0,170.0 L140.0,170.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="59" y="149.5" width="71" height="17" fill="#fff" opacity="0.92"/>
+<text x="94.5" y="158" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">permiso OK</text>
+<path d="M242.0,146.0 L290.0,50.0 L535.0,50.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="367.55" y="31.5" width="89.89999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="412.5" y="40" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">Crear usuario</text>
+<path d="M620.0,78.0 L620.0,110.0 L330.0,110.0 L270.0,146.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="404.85" y="92.5" width="140.29999999999998" height="17" fill="#fff" opacity="0.92"/>
+<text x="475" y="101" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">Crear (OK) / Cancelar</text>
+<path d="M705,38 C760,15 760,85 705,62" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<text x="760" y="42.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">error de</text><text x="760" y="57.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">validación</text>
+<path d="M320.0,170.0 L535.0,170.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="404.6" y="151.5" width="45.8" height="17" fill="#fff" opacity="0.92"/>
+<text x="427.5" y="160" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">Editar</text>
+<path d="M620.0,198.0 L620.0,225.0 L300.0,225.0 L260.5,194.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="383.55" y="226.5" width="152.9" height="17" fill="#fff" opacity="0.92"/>
+<text x="460" y="235" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">Guardar (OK) / Cancelar</text>
+<path d="M242.0,194.0 L290.0,290.0 L535.0,290.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="373.85" y="271.5" width="77.3" height="17" fill="#fff" opacity="0.92"/>
+<text x="412.5" y="280" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">Dar de baja</text>
+<path d="M620.0,314.0 L620.0,345.0 L180.0,345.0 L223.1,194.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-filled)"/>
+<rect x="339.3" y="346.5" width="121.39999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="400" y="355" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">Aceptar / Cancelar</text></svg>

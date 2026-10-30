@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><rect x="200" y="15" width="660" height="330" fill="#fbfbfb" stroke="#555" stroke-width="1.3"/>
+<text x="530" y="33" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">RF02 — Recibir el reporte de estado de los equipos</text>
+<rect x="56" y="144" width="68" height="52" fill="#eef3f8" stroke="#333" stroke-width="1.3"/>
+<text x="90" y="158" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">«sistema»</text>
+<rect x="76" y="168" width="28" height="18" fill="#fff" stroke="#333"/><line x1="84" y1="190" x2="96" y2="190" stroke="#333"/>
+<text x="90" y="206" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Agente de</text><text x="90" y="222" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">monitoreo</text>
+<ellipse cx="370" cy="170" rx="90" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="370" y="162" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Enviar reporte</text><text x="370" y="178" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">de estado</text>
+<ellipse cx="370" cy="290" rx="95" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="370" y="282" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Recolectar métricas</text><text x="370" y="298" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">del equipo</text>
+<ellipse cx="690" cy="100" rx="100" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="690" y="100" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Registrar equipo nuevo</text>
+<ellipse cx="690" cy="240" rx="95" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="690" y="232" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Actualizar datos</text><text x="690" y="248" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">del equipo</text>
+<path d="M124.0,170.0 L280.0,170.0" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M370.0,200.0 L370.0,260.0" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="377.65" y="221.5" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="410" y="230" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M612.3,117.0 L445.2,153.5" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="461.7724810862926" y="110.2685197623735" width="134" height="32" fill="#fff" opacity="0.92"/>
+<text x="528.7724810862926" y="118.7685197623735" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«extend»</text><text x="528.7724810862926" y="133.7685197623735" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">[equipo desconocido]</text>
+<path d="M611.9,222.9 L445.2,186.5" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="455.27534959257406" y="179.6883577233756" width="146.6" height="32" fill="#fff" opacity="0.92"/>
+<text x="528.5753495925741" y="188.1883577233756" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«extend»</text><text x="528.5753495925741" y="203.1883577233756" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">[equipo ya registrado]</text></svg>

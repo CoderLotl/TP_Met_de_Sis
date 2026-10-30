@@ -1,2 +1,0 @@
-1. No hay forma de leer nada de lo que logueamos. login_history y action_logs solo del lado de escritura — no existe ningún endpoint GET para consultarlos.
-2. No hay endpoint para listar usuarios. register (alta), PATCH (modificar), DELETE (borrar) — pero ningún GET /user o GET /user/:id para ver qué usuarios existen.

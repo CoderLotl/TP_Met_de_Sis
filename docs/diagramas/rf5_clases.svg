@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="420" viewBox="0 0 1060 420"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><rect x="20" y="20" width="260" height="82" fill="#fff" stroke="#37474f" stroke-width="1.3"/>
+<rect x="20" y="20" width="260" height="40" fill="#eceff1" stroke="#37474f" stroke-width="1.3"/>
+<text x="150" y="33" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">«enumeration»</text>
+<text x="150" y="49" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">PERMISSIONS</text>
+<text x="28" y="72" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">MANAGE_USERS = 1  (bit 0)</text>
+<text x="28" y="89" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">VIEW_DEVICES = 2  (bit 1)</text>
+<rect x="340" y="20" width="360" height="129" fill="#fff" stroke="#37474f" stroke-width="1.3"/>
+<rect x="340" y="20" width="360" height="28" fill="#eceff1" stroke="#37474f" stroke-width="1.3"/>
+<text x="520" y="34" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">AuthMiddleware</text>
+<line x1="340" y1="73" x2="700" y2="73" stroke="#37474f" stroke-width="1.3"/>
+<text x="348" y="85" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">+requireAuth(sessionsManager)</text>
+<text x="348" y="102" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">+requirePermission(permissionKey)</text>
+<text x="348" y="119" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">   // (permiso &amp; user.permissionKey) == permiso</text>
+<text x="348" y="136" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">+logAction(req, res, next)</text>
+<rect x="780" y="20" width="260" height="104" fill="#fff" stroke="#37474f" stroke-width="1.3"/>
+<rect x="780" y="20" width="260" height="28" fill="#eceff1" stroke="#37474f" stroke-width="1.3"/>
+<text x="910" y="34" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">User</text>
+<text x="788" y="60" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">id: int</text>
+<text x="788" y="77" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">user: string</text>
+<text x="788" y="94" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">permissionKey: int  // suma de bits</text>
+<text x="788" y="111" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">status, deleted</text>
+<rect x="340" y="230" width="300" height="138" fill="#fff" stroke="#37474f" stroke-width="1.3"/>
+<rect x="340" y="230" width="300" height="28" fill="#eceff1" stroke="#37474f" stroke-width="1.3"/>
+<text x="490" y="244" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">ActionLog (action_logs)</text>
+<text x="348" y="270" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">id: int</text>
+<text x="348" y="287" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">userId: int</text>
+<text x="348" y="304" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">endpoint: string</text>
+<text x="348" y="321" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">method: string</text>
+<text x="348" y="338" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">clientIp, userAgent, lang</text>
+<text x="348" y="355" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">createdAt: datetime</text>
+<rect x="780" y="230" width="260" height="104" fill="#fff" stroke="#37474f" stroke-width="1.3"/>
+<rect x="780" y="230" width="260" height="28" fill="#eceff1" stroke="#37474f" stroke-width="1.3"/>
+<text x="910" y="244" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">LoginHistory (login_history)</text>
+<text x="788" y="270" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">id: int</text>
+<text x="788" y="287" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">userId: int</text>
+<text x="788" y="304" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">clientIp, userAgent, lang</text>
+<text x="788" y="321" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="middle" fill="#1a1a1a">createdAt: datetime</text>
+<path d="M340.0,73.1 L280.0,69.3" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="296.55" y="53.66216216216216" width="26.9" height="17" fill="#fff" opacity="0.92"/>
+<text x="310" y="62.16216216216216" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">usa</text>
+<path d="M700.0,78.7 L780.0,76.2" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="726.55" y="59.948717948717956" width="26.9" height="17" fill="#fff" opacity="0.92"/>
+<text x="740" y="68.44871794871796" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">lee</text>
+<path d="M511.0,149.0 L499.7,230.0" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="488.7146853146853" y="172" width="33.2" height="17" fill="#fff" opacity="0.92"/>
+<text x="505.31468531468533" y="180.5" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">crea</text>
+<path d="M813.8,124.0 L617.7,230.0" fill="none" stroke="#333" stroke-width="1.3"/>
+<text x="807.9534027704831" y="124.5585180264294" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">1</text>
+<text x="643.500341722909" y="213.4414819735706" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">0..*</text>
+<path d="M910.0,124.0 L910.0,230.0" fill="none" stroke="#333" stroke-width="1.3"/>
+<text x="920" y="134" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">1</text>
+<text x="920" y="204" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">0..*</text></svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><rect x="200" y="15" width="660" height="350" fill="#fbfbfb" stroke="#555" stroke-width="1.3"/>
+<text x="530" y="33" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">RF03 — Monitorear los equipos</text>
+<g stroke="#333" stroke-width="1.6" fill="none"><circle cx="90" cy="148" r="10" fill="#fff"/><line x1="90" y1="158" x2="90" y2="182"/><line x1="74" y1="166" x2="106" y2="166"/><line x1="90" y1="182" x2="78" y2="200"/><line x1="90" y1="182" x2="102" y2="200"/></g>
+<text x="90" y="208" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Personal de IT</text><text x="90" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(permiso "Ver equipos")</text>
+<ellipse cx="380" cy="180" rx="95" ry="31" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="380" y="172" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Visualizar estado</text><text x="380" y="188" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">de los equipos</text>
+<ellipse cx="690" cy="75" rx="105" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="690" y="67" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Ver resumen</text><text x="690" y="83" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(total / online / offline)</text>
+<ellipse cx="690" cy="175" rx="110" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="690" y="167" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Ver métricas por equipo</text><text x="690" y="183" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(CPU, RAM, discos, uptime)</text>
+<ellipse cx="690" cy="285" rx="100" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="690" y="277" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Actualizar</text><text x="690" y="293" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">automáticamente (2 s)</text>
+<path d="M110.0,188.4 L285.4,182.9" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M445.9,157.7 L622.3,97.9" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="501.75514669181064" y="110.30309547535448" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="534.1051466918107" y="118.80309547535448" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M474.9,178.5 L580.2,176.8" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="495.1880126587238" y="160.12035463453674" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="527.5380126587238" y="168.62035463453674" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M445.9,202.3 L623.7,262.5" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="502.45412520286334" y="214.93365531064725" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="534.8041252028634" y="223.43365531064725" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text></svg>

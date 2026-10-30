@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640"><rect width="100%" height="100%" fill="#fff"/><defs>
+<marker id="m-filled" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="m-open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.3"/></marker>
+<marker id="m-triangle" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="m-diamond" viewBox="0 0 14 10" refX="14" refY="5" markerWidth="15" markerHeight="11" orient="auto-start-reverse"><path d="M0,5 L7,0 L14,5 L7,10 z" fill="#333"/></marker>
+</defs><rect x="250" y="20" width="600" height="600" fill="#fbfbfb" stroke="#555" stroke-width="1.3"/>
+<text x="550" y="38" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Sistema de monitoreo de equipos</text>
+<g stroke="#333" stroke-width="1.6" fill="none"><circle cx="90" cy="148" r="10" fill="#fff"/><line x1="90" y1="158" x2="90" y2="182"/><line x1="74" y1="166" x2="106" y2="166"/><line x1="90" y1="182" x2="78" y2="200"/><line x1="90" y1="182" x2="102" y2="200"/></g>
+<text x="90" y="208" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Personal de IT</text><text x="90" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">(usuario)</text>
+<g stroke="#333" stroke-width="1.6" fill="none"><circle cx="90" cy="418" r="10" fill="#fff"/><line x1="90" y1="428" x2="90" y2="452"/><line x1="74" y1="436" x2="106" y2="436"/><line x1="90" y1="452" x2="78" y2="470"/><line x1="90" y1="452" x2="102" y2="470"/></g>
+<text x="90" y="486" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Administrador</text>
+<rect x="966" y="194" width="68" height="52" fill="#eef3f8" stroke="#333" stroke-width="1.3"/>
+<text x="1000" y="208" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">«sistema»</text>
+<rect x="986" y="218" width="28" height="18" fill="#fff" stroke="#333"/><line x1="994" y1="240" x2="1006" y2="240" stroke="#333"/>
+<text x="1000" y="256" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Agente de</text><text x="1000" y="272" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">monitoreo</text>
+<ellipse cx="430" cy="90" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="430" y="90" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Iniciar sesión</text>
+<ellipse cx="430" cy="165" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="430" y="165" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Cerrar sesión</text>
+<ellipse cx="430" cy="245" rx="95" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="430" y="237" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Visualizar estado</text><text x="430" y="253" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">de los equipos</text>
+<ellipse cx="430" cy="360" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="430" y="360" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Dar de alta usuario</text>
+<ellipse cx="430" cy="430" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="430" y="430" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Modificar usuario</text>
+<ellipse cx="430" cy="500" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="430" y="500" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Dar de baja usuario</text>
+<ellipse cx="430" cy="570" rx="85" ry="27" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="430" y="570" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Asignar permisos</text>
+<ellipse cx="720" cy="220" rx="85" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="720" y="212" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Enviar reporte</text><text x="720" y="228" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">de estado</text>
+<ellipse cx="720" cy="470" rx="80" ry="25" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="720" y="470" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Registrar acción</text>
+<ellipse cx="720" cy="110" rx="85" ry="30" fill="#fff8e1" stroke="#8d6e00" stroke-width="1.3"/>
+<text x="720" y="102" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">Verificar sesión</text><text x="720" y="118" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a">y permiso</text>
+<path d="M90.0,406.0 L90.0,242.0" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#m-triangle)"/>
+<path d="M110.0,183.2 L367.3,108.2" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,187.6 L347.0,170.9" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,192.3 L345.8,231.1" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,445.6 L365.0,377.4" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,449.8 L346.6,435.2" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,453.9 L352.6,488.8" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M110.0,458.0 L372.9,550.0" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M966.0,220.0 L805.0,220.0" fill="none" stroke="#333" stroke-width="1.3"/>
+<path d="M508.0,440.8 L646.8,459.9" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="545.0394180896727" y="432.8295749089204" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="577.3894180896727" y="441.3295749089204" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M510.8,491.6 L644.1,477.9" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="545.0875365672435" y="467.24784104476794" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="577.4375365672436" y="475.74784104476794" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M487.6,550.1 L666.3,488.5" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="562.4529186957132" y="495.67140734630584" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="594.8029186957132" y="504.17140734630584" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text>
+<path d="M483.3,220.2 L668.6,133.9" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#m-open)"/>
+<rect x="543.6389605869265" y="159.53962179574108" width="64.69999999999999" height="17" fill="#fff" opacity="0.92"/>
+<text x="575.9889605869265" y="168.03962179574108" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="middle" fill="#222">«include»</text></svg>
